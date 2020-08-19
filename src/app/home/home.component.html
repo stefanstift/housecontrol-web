@@ -1,0 +1,53 @@
+<div class="content">
+
+
+  <mat-tab-group>
+    <mat-tab label="Dashboard">
+
+
+    </mat-tab>
+    <mat-tab label="EG">
+      <mat-accordion>
+
+        <mat-expansion-panel (opened)="false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Küche
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div>
+            <button mat-button (click)="switch('/room/kitchen/light/eatingcorner')" ng-class="md-icon-button">
+              Essecke <mat-icon md-font-library="material-icons">{{getIcon()}}</mat-icon>
+            </button>
+
+          </div>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel (opened)="false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Büro
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div>
+            <button mat-button (click)="switch('/room/office/light/main')" ng-class="md-icon-button">
+              <mat-icon md-font-library="material-icons">{{getIcon()}}</mat-icon>
+            </button>
+
+
+          </div>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </mat-tab>
+    <mat-tab label="OG">
+
+    </mat-tab>
+  </mat-tab-group>
+
+
+</div>

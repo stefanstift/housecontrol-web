@@ -1,0 +1,1 @@
+scp -r .\dist\housecontrolweb\* pi@raspi.stift.me:/var/www/html
