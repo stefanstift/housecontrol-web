@@ -313,9 +313,17 @@
         </button>
       </div>
 
-      <div style="text-align: center">Außentemperatur</div>
+      <div style="text-align: center">Gefühlte Außentemperatur</div>
       <div class="card" style="margin-left: auto; margin-right: auto">
-        {{getValue(measurementEnum.FEELED_TEMP)}}
+        {{getValue(measurementEnum.FEELED_TEMP)}} °C
+      </div>
+      <div style="text-align: center">Absolute Außentemperatur</div>
+      <div class="card" style="margin-left: auto; margin-right: auto">
+        {{getValue(measurementEnum.TEMP)}} °C
+      </div>
+      <div style="text-align: center">Windgeschwindigkeit</div>
+      <div class="card" style="margin-left: auto; margin-right: auto">
+        {{getValue(measurementEnum.WIND)}} m/s
       </div>
 
 

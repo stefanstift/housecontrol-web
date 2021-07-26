@@ -9,17 +9,25 @@ import {RoomLight} from './light.service';
 export class DashboardService {
 
   feeledTemp: number;
+  temp: number;
+  wind: number;
 
   constructor(private http: HttpClient) { }
 
   init() {
     this.callForValue(Measurement.FEELED_TEMP);
+    this.callForValue(Measurement.TEMP);
+    this.callForValue(Measurement.WIND);
   }
 
   getValue(measurement: Measurement) {
     switch (measurement) {
       case Measurement.FEELED_TEMP:
         return this.feeledTemp;
+      case Measurement.TEMP:
+        return this.temp;
+      case Measurement.WIND:
+        return this.wind;
     }
   }
 
@@ -31,6 +39,12 @@ export class DashboardService {
         case Measurement.FEELED_TEMP:
           this.feeledTemp = state;
           break;
+        case Measurement.TEMP:
+          this.temp = state;
+          break;
+        case Measurement.WIND:
+          this.wind = state;
+          break;
       }
     });
   }
@@ -38,7 +52,9 @@ export class DashboardService {
 
 
 export enum Measurement {
-  FEELED_TEMP = 'mess/feeledtemp'
+  FEELED_TEMP = 'mess/feeledtemp',
+  TEMP = 'mess/temp',
+  WIND = 'mess/windspeed'
 
 }
 
