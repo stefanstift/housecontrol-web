@@ -9,7 +9,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
-import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -25,7 +24,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatIconModule,
     MatTabsModule,
     MatExpansionModule,
-    HttpClientModule,
     MatCardModule
   ],
   providers: [],
