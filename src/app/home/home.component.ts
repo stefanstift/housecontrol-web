@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {Observable, Subscriber} from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Subscriber} from 'rxjs';
 
 export interface Tile {
   color: string;
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
   switch(path: string) {
      console.log('sending put to path ' + path);
-     this.http.put('http://192.168.9.138:8080/api' + path, {})._subscribe(new Subscriber<any>());
+     this.http.put('http://192.168.9.138:8080/api' + path, {}).subscribe(new Subscriber<any>());
      this.lightOfficeMain = !this.lightOfficeMain;
   }
 
