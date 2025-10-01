@@ -6,6 +6,7 @@ import {Scene, SceneService} from './scene.service';
 import {DashboardService, Measurement} from './dashboard.service';
 
 @Component({
+  standalone: false,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

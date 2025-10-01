@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, provideZonelessChangeDetection } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatGridListModule,
     MatIconModule,
@@ -26,7 +28,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatExpansionModule,
     MatCardModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [provideZonelessChangeDetection()],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
